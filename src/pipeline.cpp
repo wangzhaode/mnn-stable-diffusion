@@ -40,7 +40,7 @@ Pipeline::Pipeline(std::string modelPath) : mModelPath(modelPath) {
 void Pipeline::loadNet(std::string modelPath) {
     mNet.reset(Interpreter::createFromFile(modelPath.c_str()));
     ScheduleConfig config;
-#if 1
+#if 0
     config.type = MNN_FORWARD_CUDA;
     BackendConfig backendConfig;
     backendConfig.precision = BackendConfig::Precision_Normal;
