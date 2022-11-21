@@ -7,13 +7,19 @@
 git clone https://github.com/alibaba/MNN.git
 cd MNN
 mkdir build
-cmake -DMNN_BUILD_OPENCV=ON MNN_IMGCODECS=ON ..
+cmake -DMNN_BUILD_OPENCV=ON -DMNN_IMGCODECS=ON ..
 make -j8
 cp libMNN.so express/libMNN_Express.so tools/cv/libMNNOpenCV.so /path/to/stable-diffusion-mnn/libs
 ```
 
 ### 2. Download Models
 Download models from `github release` to `/path/to/stable-diffusion-mnn/resource`
+```bash
+cd resource
+wget https://github.com/wangzhaode/stable-diffusion-mnn/releases/download/v0.1/text_encoder.mnn
+wget https://github.com/wangzhaode/stable-diffusion-mnn/releases/download/v0.1/vae_decoder.mnn
+wget https://github.com/wangzhaode/stable-diffusion-mnn/releases/download/v0.1/unet.mnn
+```
 
 ### 2. Build and Run
 ```bash
