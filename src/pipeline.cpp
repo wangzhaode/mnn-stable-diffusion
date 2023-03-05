@@ -46,7 +46,7 @@ void Pipeline::loadNet(std::string modelPath) {
     backendConfig.precision = BackendConfig::Precision_Normal;
 #else
     config.type = MNN_FORWARD_CPU;
-    config.numThread = 2;
+    config.numThread = 12;
     BackendConfig backendConfig;
     backendConfig.precision = BackendConfig::Precision_Normal;
 #endif

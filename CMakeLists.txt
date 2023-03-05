@@ -10,9 +10,13 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/include/)
 link_directories(${CMAKE_CURRENT_LIST_DIR}/libs)
 
 # source files
-FILE(GLOB SRCS ${CMAKE_CURRENT_LIST_DIR}/src/*)
+FILE(GLOB SRCS ${CMAKE_CURRENT_LIST_DIR}/src/*.cpp)
 
 # target
 add_executable(main ${SRCS})
 
-target_link_libraries(main MNN MNN_Express MNNOpenCV)
+if (MSVC)
+    target_link_libraries(main MNN)
+else()
+    target_link_libraries(main MNN MNN_Express MNNOpenCV)
+endif()

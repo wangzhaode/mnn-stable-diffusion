@@ -4,6 +4,7 @@
 int main(int argc, const char* argv[]) {
     if (argc < 3) {
         printf("Usage: ./main <senetence> <img_name>");
+        return 1;
     }
     auto sentence = argv[1];
     auto img_name = argv[2];
