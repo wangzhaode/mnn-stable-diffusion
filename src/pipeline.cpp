@@ -40,7 +40,7 @@ Pipeline::Pipeline(std::string modelPath) : mModelPath(modelPath) {
 void Pipeline::loadNet(std::string modelPath) {
     mNet.reset(Interpreter::createFromFile(modelPath.c_str()));
     ScheduleConfig config;
-#if 0
+#if 1
     config.type = MNN_FORWARD_CUDA;
     BackendConfig backendConfig;
     backendConfig.precision = BackendConfig::Precision_Normal;
@@ -169,6 +169,7 @@ VARP Pipeline::vae_decoder(VARP latent) {
     image = _Relu6(image * _Const(0.5) + _Const(0.5), 0, 1);
     image = _Squeeze(_Transpose(image, {0, 2, 3, 1}));
     image = _Cast(_Round(image * _Const(255.0)), halide_type_of<uint8_t>());
+    image = cvtColor(image, COLOR_BGR2RGB);
     image.fix(VARP::CONSTANT);
     return image;
 }
