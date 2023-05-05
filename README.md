@@ -58,6 +58,19 @@ ninja
 [##################################################]  [100%] [iter time: 411.441000 ms]
 SUCCESS! write to demo.jpg
 ```
+#### Android
+```bash
+mkdir build
+cd build
+../android_build.sh
+adb push main ../libs/*.so /data/local/tmp/
+adb push ../resource /data/local/tmp/
+adb shell
+cd /data/local/tmp/
+./main "飞流直下三千尺，疑是银河落九天，唐诗，水墨，国画。" demo.jpg
+[##################################################]  [100%] [iter time: 411.441000 ms]
+SUCCESS! write to demo.jpg
+```
 
 ![demo.jpg](https://github.com/wangzhaode/stable-diffusion-mnn/blob/main/resource/demo.jpg)
 
