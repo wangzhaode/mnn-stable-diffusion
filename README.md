@@ -1,4 +1,4 @@
-# Stable Diffusion MNN
+# mnn-stable-diffusion
 
 ## Usage
 
@@ -26,12 +26,12 @@ cp MNN.dll MNN.lib /path/to/stable-diffusion-mnn/build
 ```
 
 ### 2. Download Models
-Download models from `github release` to `/path/to/stable-diffusion-mnn/resource`
+Download models from `github release` to `/path/to/mnn-stable-diffusion/resource`
 ```bash
 cd resource
-wget https://github.com/wangzhaode/stable-diffusion-mnn/releases/download/v0.1/text_encoder.mnn
-wget https://github.com/wangzhaode/stable-diffusion-mnn/releases/download/v0.1/vae_decoder.mnn
-wget https://github.com/wangzhaode/stable-diffusion-mnn/releases/download/v0.1/unet.mnn
+wget https://github.com/wangzhaode/mnn-stable-diffusion/releases/download/v0.1/text_encoder.mnn
+wget https://github.com/wangzhaode/mnn-stable-diffusion/releases/download/v0.1/vae_decoder.mnn
+wget https://github.com/wangzhaode/mnn-stable-diffusion/releases/download/v0.1/unet.mnn
 ```
 
 ### 2. Build and Run
@@ -72,7 +72,7 @@ cd /data/local/tmp/
 SUCCESS! write to demo.jpg
 ```
 
-![demo.jpg](https://github.com/wangzhaode/stable-diffusion-mnn/blob/main/resource/demo.jpg)
+![demo.jpg](./resource/demo.jpg)
 
 ## Speed
 
