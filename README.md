@@ -1,3 +1,5 @@
+![mnn-stable-diffusion](resource/logo.png)
+
 # mnn-stable-diffusion
 
 ## Usage
